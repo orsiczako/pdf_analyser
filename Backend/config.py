@@ -22,7 +22,7 @@ class Config:
     
     # PDF feldolgozó konfiguráció
     OCR_LANGUAGE = "hun+eng+deu+fra"  # Tesseract nyelvkódok (magyar, angol, német, francia)
-    IMAGE_DPI = 300  # Kép felbontás OCR-hez
+    IMAGE_DPI = int(os.getenv("IMAGE_DPI", "200"))  # Csökkentett DPI a kevesebb memóriahasználatért (200 helyett 300)
     
     NUTRITION_CATEGORIES = [
         "energia",
