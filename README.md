@@ -2,7 +2,7 @@
 
 AI-alapú automatizált rendszer tápértékek és allergének kinyerésére PDF dokumentumokból.
 
-🚀 **Élő alkalmazás:** https://pdf-analyser-pi.vercel.app
+**Élő alkalmazás:** https://pdf-analyser-pi.vercel.app
 
 **[→ Alkalmazás megnyitása](https://pdf-analyser-pi.vercel.app)**
 
