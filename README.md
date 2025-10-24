@@ -2,6 +2,8 @@
 
 AI-alapú automatizált rendszer tápértékek és allergének kinyerésére PDF dokumentumokból.
 
+**[Élő alkalmazás megtekintése](https://pdf-analyser-pi.vercel.app)**
+
 ## Főbb jellemzők
 
 - 4-lépcsős intelligens PDF feldolgozás (digitális + szkennelt támogatás)

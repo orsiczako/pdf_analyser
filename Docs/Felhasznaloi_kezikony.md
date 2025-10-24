@@ -4,6 +4,8 @@
 
 Ez az útmutató segít az alkalmazás használatában, lépésről lépésre.
 
+**[Alkalmazás megnyitása böngészőben](https://pdf-analyser-pi.vercel.app)**
+
 ---
 
 ## Az alkalmazásról:
@@ -20,7 +22,7 @@ A **PDF Allergén & Tápérték Elemző** egy webes alkalmazás, amely:
 
 ### 1. Alkalmazás megnyitása
 
-Nyisd meg a webböngésződben az alkalmazást
+Nyisd meg a webböngésződben az alkalmazást: **https://pdf-analyser-pi.vercel.app**
 
 ### 2. Felület áttekintése
 
