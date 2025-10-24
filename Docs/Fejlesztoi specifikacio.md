@@ -2,6 +2,8 @@
 
 **Stack:** Python 3.13 + FastAPI + Google Gemini AI | React 18 + Vite
 
+**GitHub Repository:** https://github.com/orsiczako/pdf_analyser
+
 ---
 
 ## Rendszer áttekintés
