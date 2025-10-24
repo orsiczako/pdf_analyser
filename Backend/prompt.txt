@@ -1,0 +1,46 @@
+Extract nutrition and allergen data from food product specifications.
+
+WHAT TO EXTRACT:
+
+6 Nutrition values (per 100g) - USE THESE EXACT HUNGARIAN KEYS:
+1. energia (energy) → use kcal (not kJ). Example: "282kcal" → "282"
+2. zsír (fat) → Example: "18,9 g" → "18.9"
+3. szénhidrát (carbohydrate) → Example: "8,7g" → "8.7"  
+4. cukor (sugar, often "of which sugars") → Example: "0,6 g" → "0.6"
+5. fehérje (protein) → Example: "19 g" → "19"
+6. nátrium (sodium) → If missing, calculate from salt: sodium = salt / 2.5. Example: "Salt 2,3g" → "0.92"
+
+10 Allergens (true if present, false if not) - USE THESE EXACT HUNGARIAN KEYS:
+glutén, tojás, rák, hal, földimogyoró, szója, tej, diófélék, zeller, mustár
+
+EXAMPLE INPUT:
+"Nutritional information/Tápérték adatok:
+Energy/Energia 1173 kJ/282kcal
+Fat/Zsír 18,9 g
+Carbohydrate/Szénhidrát 8,7g
+-of which sugars/ amelyből cukrok 0,6 g
+Protein/Fehérje 19 g
+Salt/Só 2,3g"
+
+EXACT OUTPUT FORMAT (copy these keys exactly):
+{
+  "nutrition": {
+    "energia": {"per_100g": "282", "unit": "kcal"},
+    "zsír": {"per_100g": "18.9", "unit": "g"},
+    "szénhidrát": {"per_100g": "8.7", "unit": "g"},
+    "cukor": {"per_100g": "0.6", "unit": "g"},
+    "fehérje": {"per_100g": "19", "unit": "g"},
+    "nátrium": {"per_100g": "0.92", "unit": "g"}
+  },
+  "allergens": {
+    "glutén": true, "tojás": false, "rák": false, "hal": false,
+    "földimogyoró": false, "szója": true, "tej": false, "diófélék": false,
+    "zeller": false, "mustár": false
+  }
+}
+
+RULES:
+- Convert commas to periods (18,9 → 18.9)
+- Ignore subcategories like "of which saturates"
+- Return null if value not found: {"per_100g": null, "unit": null}
+- Return ONLY the JSON, no markdown fences
