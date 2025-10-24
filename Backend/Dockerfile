@@ -1,7 +1,8 @@
+
 FROM python:3.11-slim
 
-# Telepítsd a Tesseract OCR-t
-RUN apt-get update && apt-get install -y tesseract-ocr
+# Telepítsd a Tesseract OCR-t és a Poppler-t
+RUN apt-get update && apt-get install -y tesseract-ocr poppler-utils
 
 # Mappa beállítása
 WORKDIR /app
