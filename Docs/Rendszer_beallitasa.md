@@ -41,7 +41,7 @@ Ez automatikusan telepít mindent, ami a requirements.txt-ben szerepel:
 
 #### 3. Tesseract OCR telepítése (opcionális - csak szkennelt PDF-ekhez)
 
-**⚠️ Csak akkor szükséges, ha szkennelt/képes PDF dokumentumokkal dolgozol!**
+**Csak akkor szükséges, ha szkennelt/képes PDF dokumentumokkal dolgozol!**
 **Digitális PDF-ekhez (Word→PDF export) NEM kell OCR.**
 
 **Windows:**
@@ -61,16 +61,12 @@ sudo apt-get update
 sudo apt-get install tesseract-ocr tesseract-ocr-hun tesseract-ocr-eng
 ```
 
-**macOS:**
-```bash
-brew install tesseract tesseract-lang
-```
 
 ---
 
 #### 4. Poppler telepítése (opcionális - csak szkennelt PDF-ekhez)
 
-**⚠️ Csak Tesseract OCR-rel együtt szükséges!** (PDF → kép konverzióhoz)
+**Csak Tesseract OCR-rel együtt szükséges!** (PDF → kép konverzióhoz)
 
 **Windows:**
 1. Letöltés: https://github.com/oschwartz10612/poppler-windows/releases

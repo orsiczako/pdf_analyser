@@ -38,7 +38,7 @@ class TextCleaner:
     def _fix_numeric_commas(text: str) -> str:
         """
         Vesszők pontra konvertálása numerikus értékekben.
-        Példák: "6,9 g" → "6.9 g", "1,234" → "1.234"
+        Példák: "6,9 g" -> "6.9 g", "1,234" -> "1.234"
         """
         # Minta: számjegy + vessző + számjegy(ek)
         pattern = r'(\d+),(\d+)'

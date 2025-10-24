@@ -19,5 +19,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Port környezeti változó beállítása (Render használja)
 ENV PORT=8000
 
-# Alapértelmezett indítás - használja a PORT környezeti változót, hosszabb timeout Render free tier-hez
-CMD uvicorn main:app --host 0.0.0.0 --port $PORT --workers 1 --timeout-keep-alive 300
+# Alapértelmezett indítás - használja a PORT környezeti változót
+CMD uvicorn main:app --host 0.0.0.0 --port $PORT --workers 1 --timeout-keep-alive 120
